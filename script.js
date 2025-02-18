@@ -1,9 +1,13 @@
+document.addEventListener("DOMContentLoaded", function () {
+  showLocalDate();
+});
+
 function showLocalDate() {
   const dateElement = document.getElementById("date");
 
   if (!dateElement) {
-      console.error("Hata: 'date' ID'sine sahip öğe bulunamadı!");
-      return;
+    console.error("Hata: 'date' ID'sine sahip öğe bulunamadı!");
+    return;
   }
 
   const now = new Date();
@@ -19,6 +23,17 @@ function showLocalDate() {
   dateElement.textContent = formattedDate;
 }
 
-document.addEventListener("DOMContentLoaded", showLocalDate);
 
-setInterval(showLocalDate, 1000);
+const openModal = document.getElementById("about-section");
+const modal = document.getElementById("myModal");
+
+openModal.addEventListener("click", function (event) {
+  event.stopPropagation();
+  modal.style.display = "flex";
+});
+
+window.addEventListener("click", function(event) {
+  if (!modal.contains(event.target)) {
+    modal.style.display = "none";
+  }
+});

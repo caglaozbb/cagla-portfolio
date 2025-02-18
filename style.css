@@ -114,3 +114,30 @@ a:hover {
   75% { background-position: -100% 100%; }
   100% { background-position: 0 0; }
 }
+
+.about-section {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 120px;
+  top: 10%;
+  right: 10%
+}
+.about-section p {
+  font-size: 1rem;
+  margin: 0px 0px 0 3px;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+}
+
+.modal {
+  display: none;
+  position: absolute;
+  z-index: 1;  
+  left: 25%;
+  top: 10%;
+  width: auto;
+  height: 80%;
+
+}
