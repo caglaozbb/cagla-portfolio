@@ -1,0 +1,116 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100%; 
+  overflow: hidden;
+
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  color: #222;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+.nav-container {
+  display: flex;
+  padding: 5px 0px 5px 0px;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #f4f4f4;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo{
+  margin-left: 10px;
+}
+
+.name {
+  padding-top: 2px;
+}
+
+.date {
+  font-family: 'Roboto Mono', monospace;
+  padding-right: 10px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Tam ekran yapılması için */
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute; /* Mutlak konumlandırma ile video arka planda olacak */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Video, ekranı tamamen kaplasın */
+  z-index: -1; /* Video arka planda olacak */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Siyah ve %80 opaklık */
+  pointer-events: none; /* Katman tıklanabilir olmasın */
+}
+
+.noise {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/media/noise.png');
+  background-size: cover;
+  opacity: 0.4; /* Gürültü efekti görünür olsun diye saydamlık */
+  pointer-events: none; /* Tıklanabilir yapma */
+  animation: noisemove 0.6s steps(4, end) infinite;
+}
+
+/* Gürültü hareket animasyonu */
+@keyframes noisemove {
+  0% { background-position: 0 0; }
+  25% { background-position: -100% 0; }
+  50% { background-position: 0 100%; }
+  75% { background-position: -100% 100%; }
+  100% { background-position: 0 0; }
+}
