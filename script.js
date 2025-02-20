@@ -37,3 +37,17 @@ window.addEventListener("click", function(event) {
     modal.style.display = "none";
   }
 });
+
+const openModal2 = document.getElementById("manual-section");
+const modal2 = document.getElementById("myModal2");
+
+openModal2.addEventListener("click", function (event) {
+  event.stopPropagation();
+  modal2.style.display = "flex";
+});
+
+window.addEventListener("click", function(event) {
+  if (!modal2.contains(event.target)) {
+    modal2.style.display = "none";
+  }
+});

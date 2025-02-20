@@ -160,7 +160,7 @@ a:hover {
   font-weight: bold;
 }
 
-.contact-section {
+.contact-section a {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -175,9 +175,10 @@ a:hover {
   padding: 0;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
+  color: #333;
 }
 
-.app1-section a {
+.dailynote-section a {
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -186,7 +187,7 @@ a:hover {
   top: 30%;
   right: 6%
 }
-.app1-section p {
+.dailynote-section p {
   font-size: 1rem;
   margin: 5px 0px 0 25px;
   padding: 0;
@@ -242,14 +243,87 @@ a:hover {
   display: flex;
   flex-direction: column;
   position: absolute;
-  width: 140px;
-  height: 140px;
-  top: 10%;
-  left: 1%
+  width: 90px;
+  height: 90px;
+  top: 30%;
+  left: 2.5%
 }
 .linkedin-section p {
   font-size: 1rem;
-  margin: 0px 0px 0 30px;
+  margin: 0px 0px 0 10px;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  color: #333;
+}
+
+.quizcraft-section a {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 45%;
+  left: 2%
+}
+.quizcraft-section p {
+  font-size: 1rem;
+  margin: 0px 0px 0 10px;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  color: #333;
+}
+
+.manual-section  {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 10%;
+  left: 2%
+}
+.manual-section p {
+  font-size: 1rem;
+  margin: 0px 0px 0 10px;
+  padding: 0;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.modal2 {
+  display: none;
+  position: absolute;
+  z-index: 1;  
+  left: 20%;
+  top: 10%;
+  width: auto;
+  height: 80%;
+
+}
+
+.bytebuddy-section  {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  top: 80%;
+  left: 5%;
+}
+
+.bytebuddy-image{
+  border-radius: 25%;
+  border-width: 10px;
+  width: 70px;
+  height: 70px;
+}
+
+.bytebuddy-section p {
+  font-size: 1rem;
+  margin: 0px 0px 0 -10px;
   padding: 0;
   font-family: 'Roboto Mono', monospace;
   font-weight: bold;
