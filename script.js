@@ -38,6 +38,12 @@ window.addEventListener("click", function(event) {
   }
 });
 
+window.addEventListener("touchstart", function(event) {
+  if (modal.style.display === "flex" && !modal.contains(event.target) && event.target !== openModal) {
+    modal.style.display = "none";
+  }
+});
+
 const openModal2 = document.getElementById("manual-section");
 const modal2 = document.getElementById("myModal2");
 
@@ -48,6 +54,12 @@ openModal2.addEventListener("click", function (event) {
 
 window.addEventListener("click", function(event) {
   if (!modal2.contains(event.target)) {
+    modal2.style.display = "none";
+  }
+});
+
+window.addEventListener("touchstart", function(event) {
+  if (modal2.style.display === "flex" && !modal2.contains(event.target) && event.target !== openModal2) {
     modal2.style.display = "none";
   }
 });
