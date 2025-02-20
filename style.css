@@ -1,11 +1,11 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: bold;  
   margin: 0;
   padding: 0;
   color: #333;
   height: 100%; 
   overflow: hidden;
-
 }
 
 header {
@@ -15,20 +15,11 @@ header {
   text-align: center;
 }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1, h2 {
-  color: #222;
-}
-
 a {
-  color: #007BFF;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color:#333;
   text-decoration: none;
 }
 
@@ -36,6 +27,9 @@ a:hover {
   text-decoration: underline;
 }
 
+p{
+  font-size: 1rem;
+}
 
 .nav-container {
   display: flex;
@@ -51,6 +45,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
+  padding-top: 5px;
 }
 
 .logo{
@@ -58,7 +53,11 @@ a:hover {
 }
 
 .name {
-  padding-top: 2px;
+  padding: 2px;
+  margin: 0px;
+  font-size: 1rem;
+  color: #f4f4f4;
+  font-weight: 400;
 }
 
 .date {
@@ -69,18 +68,18 @@ a:hover {
 .video-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Tam ekran yapılması için */
+  height: 100vh;
   overflow: hidden;
 }
 
 .video-background {
-  position: absolute; /* Mutlak konumlandırma ile video arka planda olacak */
+  position: absolute; 
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Video, ekranı tamamen kaplasın */
-  z-index: -1; /* Video arka planda olacak */
+  object-fit: contain; 
+  z-index: -1; 
 }
 
 .overlay {
@@ -89,8 +88,8 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3); /* Siyah ve %80 opaklık */
-  pointer-events: none; /* Katman tıklanabilir olmasın */
+  background-color: rgba(0, 0, 0, 0.3); 
+  pointer-events: none; 
 }
 
 .noise {
@@ -101,12 +100,12 @@ a:hover {
   height: 100%;
   background-image: url('/media/noise.png');
   background-size: cover;
-  opacity: 0.4; /* Gürültü efekti görünür olsun diye saydamlık */
-  pointer-events: none; /* Tıklanabilir yapma */
+  opacity: 0.4; 
+  pointer-events: none; 
   animation: noisemove 0.6s steps(4, end) infinite;
 }
 
-/* Gürültü hareket animasyonu */
+/* Gürültü hareket animasyonu  */
 @keyframes noisemove {
   0% { background-position: 0 0; }
   25% { background-position: -100% 0; }
@@ -115,20 +114,20 @@ a:hover {
   100% { background-position: 0 0; }
 }
 
-.about-section {
+.section{
   display: flex;
   flex-direction: column;
   position: absolute;
+}
+
+.about {
   width: 150px;
   top: 10%;
   right: 5%
 }
-.about-section p {
-  font-size:0.9rem;
-  margin: 5px 0px 0 20px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
+
+.about p {
+  margin: 0px 0px 0 35px;
 }
 
 .modal {
@@ -139,79 +138,49 @@ a:hover {
   top: 10%;
   width: auto;
   height: 80%;
-
 }
 
-
-.resume-section a{
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.resume a{
   width: 125px;
   top: 80%;
   right: 5%;
-  color:#333
-}
-.resume-section p {
-  font-size: 1rem;
-  margin: 5px 0px 0 15px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
 }
 
-.contact-section a {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.resume p {
+  margin: 5px 0px 0 15px;
+}
+
+.contact a {
   width: 100px;
   height: 100;
   top: 30%;
   right: 15%
 }
-.contact-section p {
-  font-size: 1rem;
+
+.contact p {
   margin: 5px 0px 0 25px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
 
-.dailynote-section a {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.dailynote a {
   width: 100px;
   height: 100px;
   top: 30%;
   right: 6%
 }
-.dailynote-section p {
-  font-size: 1rem;
+
+.dailynote p {
   margin: 5px 0px 0 25px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
 
-.github-section a {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.github a {
   width: 140px;
   height: 140px;
   top: 50%;
   right: 6%
 }
-.github-section p {
-  font-size: 1rem;
+
+.github p {
   margin: 5px 0px 0 45px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
 
 .quote {
@@ -220,79 +189,59 @@ a:hover {
   height: 200px;
   top: 55%;
   right: 17%;
-  color: black;
   background-color: white;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-align: center;
   padding: 20px;
-  font-style: italic;
 }
 
-.giphy-section  {
+.quote p {
+  margin: 0px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+}
+
+.giphy  {
   display: flex;
   position: absolute;
   flex-direction: column;
   width: 100px;
   height: 100px;
-  top: 70%;
-  right: 14%;
+  top: 72%;
+  right: 13%;
 }
 
-.linkedin-section a {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.linkedin a {
   width: 90px;
   height: 90px;
   top: 30%;
   left: 2.5%
 }
-.linkedin-section p {
-  font-size: 1rem;
+
+.linkedin p {
   margin: 0px 0px 0 10px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
 
-.quizcraft-section a {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.quizcraft a {
   width: 100px;
   height: 100px;
   top: 45%;
   left: 2%
 }
-.quizcraft-section p {
-  font-size: 1rem;
+
+.quizcraft p {
   margin: 0px 0px 0 10px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
 
-.manual-section  {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
+.manual  {
   width: 120px;
   height: 120px;
   top: 10%;
   left: 2%
 }
-.manual-section p {
-  font-size: 1rem;
+.manual p {
   margin: 0px 0px 0 10px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
 }
-
 
 .modal2 {
   display: none;
@@ -302,14 +251,9 @@ a:hover {
   top: 10%;
   width: auto;
   height: 80%;
-
 }
 
-.bytebuddy-section  {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-
+.bytebuddy a {
   top: 80%;
   left: 5%;
 }
@@ -321,11 +265,149 @@ a:hover {
   height: 70px;
 }
 
-.bytebuddy-section p {
-  font-size: 1rem;
+.bytebuddy p {
   margin: 0px 0px 0 -10px;
-  padding: 0;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: bold;
-  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  body {  
+    font-size: 12px;
+  }
+
+  p{
+    font-size: 10px;
+  }
+
+  .name{
+    font-size: 14px;
+    padding-top: 6px;
+  }
+  .date{
+    padding-top: 6px;
+  }
+
+  .about {
+    width: 100px;
+    top: 10%;
+    right: 5%
+  }
+  
+  .about p {
+    margin: 0px 0px 0 25px;
+  }
+
+  .modal {
+    left: 0px;
+    top: 10%;
+    width: auto;
+    height: 40%;
+  }
+
+  .resume a{
+  width: 80px;
+  top: 84%;
+  right: 5%;
+  }
+
+  .resume p {
+  margin: 5px 0px 0 10px;
+  }
+
+  .contact a {
+    width: 60px;
+    top: 30%;
+    right: 30%
+  }
+  
+  .contact p {
+    margin: 5px 0px 0 15px;
+  }
+
+  .dailynote a {
+    width: 60px;
+    top: 27%;
+
+  }
+  
+  .dailynote p {
+    margin: 5px 0px 0 15px;
+  }
+
+  .github a {
+    width: 120px;
+    height: 120px;
+    top: 40%;
+  }
+  
+  .github p {
+    margin: -10px 0px 0 45px;
+  }
+
+
+  .quote {
+  width: 100px;
+  height: 150px;
+  top: 60%;
+  right: 17%;
+  padding: 10px;
+  }
+
+  .quote p {
+  margin: 0px;
+  margin-top: -5px;
+  font-size: 8px;
+  }
+
+  .giphy  {
+  width: 50px;
+  top: 76%;
+  right: 9%;
+  }
+
+  .manual  {
+    width: 100px;
+  }
+  .manual p {
+    margin: 0px 0px 0 17px;
+  }
+  
+  .linkedin a {
+  width: 70px;
+  }
+
+  .linkedin p {
+  margin: 0px 0px 0 12px;
+  }
+
+  .quizcraft a {
+  width: 50px;
+  left: 7%
+  }
+
+  .quizcraft p {
+  margin: 0px 0px 0 0px;
+  }
+
+  .bytebuddy a {
+    top: 80%;
+    left: 5%;
+  }
+  
+  .bytebuddy-image{
+    width: 60px;
+    height: 60px;
+  }
+  
+  .bytebuddy p {
+    margin: 5px 0px 0 2px;
+  }
+
+  .modal2 {  
+    left: 0px;
+    top: 10%;
+    width: auto;
+    height: 40%;
+  }
+
 }

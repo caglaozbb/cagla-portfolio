@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cagla Ozbaba Portfolio, personal website.">
+    <meta name="keywords" content="Cagla Ozbaba, portfolio, cv, resume, personal website, javascript, css, html">
+    <meta name="author" content="Cagla Ozbaba">
     <title>Cagla Ozbaba</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,13 +16,10 @@
 </head>
 <body>
   <nav>
-    <div id="nav-container" class="nav-container">
+    <div class="nav-container">
       <div class="icon">
-
-        <div id="logo" class="logo">
-          <i class="fa-solid fa-paperclip fa-spin" style="color: white;"></i>
-        </div>
-        <span class="name">Cagla</span>
+          <i class="fa-solid fa-paperclip fa-spin logo" style="color: white;"></i>
+          <h1 class="name">Cagla</h1>
       </div>
 
       <div id="date" class="date">
@@ -30,65 +30,97 @@
 
   <div class="video-container">
     <video class="video-background" autoplay muted loop>
-      <source src="/media/dancing-cat.mp4" type="video/mp4">
+      <source src="/media/dancing-cat.mp4" type="video/mp4" poster="/media/silly-cat.jpeg">
       Tarayıcınız video desteği sunmuyor.
     </video>
     <div class="overlay"></div> 
     <div class="noise"></div>
   </div>
 
-  <div id="about-section" class="about-section">
+  <section id="about-section" class="section about">
       <img src="/media/who-am-i.png" alt="About me Picture" class="about-me-image">
-      <p>About-me.txt</p>
-  </div>
+      <p>About Me</p>
+  </section>
+
   <div id="myModal" class="modal">
     <img src="/media/who-am-i.png" alt="About me Picture" class="about-me-image-modal">
   </div>
 
-  <div id="resume-section" class="resume-section">
+
+
+  <section class="resume">
     <a href="https://flowcv.com/resume/6ifg46oq2v" target="_blank">
     <img src="/media/cagla-ozbaba.jpeg" alt="Resume Picture" class="resume-image">
     <p>Resume.pdf</p>
     </a>
-  </div>
+  </section>
   
-  <div id="contact-section" class="contact-section">
+
+  <section  class="contact">
+    <a href="mailto:caglaozbb@gmail.com">
     <img src="/media/contact.png" alt="Contact Picture" class="contact-image">
     <p>Email</p>
-  </div>
+  </a>
+  </section>
 
-  <div id="app1-section" class="app1-section">
+
+
+  <section class="dailynote">
     <a href="https://daily-note-plus.vercel.app/" target="_blank">
-      <img src="/media/daily-note.webp" alt="App1 Picture" class="app1-image">
+      <img src="/media/daily-note.webp" alt="App1 Picture" class="dailynote-image">
       <p>Daily Note</p>
     </a>
-  </div>
+  </section>
   
-  <div id="github-section" class="github-section">
+
+  <section class="github">
     <a href="https://github.com/caglaozbb" target="_blank">
       <img src="/media/GitHub.png" alt="github Picture" class="github-image">
       <p>Github</p>
     </a>
-  </div>
+  </section>
 
 
-  <div class="quote">
+  <section class="quote">
     <p>“I wish it need not have happened in my time," said Frodo.
       "So do I," said Gandalf, "and so do all who live to see such times. But that is not for them to decide. All we have to decide is what to do with the time that is given us.”
       <br> <br> ― J.R.R. Tolkien, The Fellowship of the Ring</p>
-  </div>
+  </section>
 
-  <div id="giphy-section" class="giphy-section">
+  <div class="giphy">
       <img src="/media/giphy.webp" alt="giphy Picture" class="giphy-image">
   </div>
 
-  <div id="linkedin-section" class="linkedin-section">
+  <section class="linkedin">
     <a href="https://www.linkedin.com/in/cagla-ozbaba/" target="_blank">
       <img src="/media/linkedin.png" alt="linkedin Picture" class="linkedin-image">
       <p>Linkedin</p>
     </a>
-  </div>
+  </section>
   
+  <section class="quizcraft">
+    <a href="https://www.quizcraft.quest/" target="_blank">
+      <img src="/media/quizcraft.png" alt="quizcraft Picture" class="quizcraft-image">
+      <p>Quizcraft</p>
+    </a>
+  </section>
+
+  <section id="manual-section" class="manual section">
+      <img src="/media/pc.png" alt="pc Picture" class="pc-image">
+      <p>User Manual</p>
+  </section>
+
+  <div id="myModal2" class="modal2">
+    <img src="/media/user-manual.png" alt="user manual Picture" class="manual-modal">
+  </div>
+
+  <section class="bytebuddy">
+    <a href="https://chromewebstore.google.com/detail/byte-buddy/pbccnhlpehadbpnadlginigmfifejmcb" target="_blank">
+      <img src="/media/bytebuddy.png" alt="bytebuddy Picture" class="bytebuddy-image">
+      <p>Byte Buddy</p>
+    </a>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
